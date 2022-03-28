@@ -50,7 +50,7 @@ app.post('/roller-coaster', (request, response) => {
   let rollercoaster = request.body;
   RollerCoaster
     .create(rollercoaster)
-    .then(() => response.send("Sucess"))
+    .then(newRollerCoaster => response.json(newRollerCoaster))
 })
 
 // Read one
@@ -75,7 +75,7 @@ app.put('/roller-coaster/:id', (request, response) => {
   let newRollerCoasterData = request.body
   RollerCoaster
     .findByIdAndUpdate(rollerCoasterId, newRollerCoasterData, { new: true })
-    .then(() => response.send("Updated"))
+    .then(updatedRollerCoaster => response.json(updatedRollerCoaster))
 })
 
 // Delete
