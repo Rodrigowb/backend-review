@@ -4,6 +4,7 @@
     "mongoose": "^6.2.8"
   },
   "scripts":{
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "sedd": "node ./seed.js"
   }
 }
